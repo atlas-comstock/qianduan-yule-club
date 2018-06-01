@@ -234,7 +234,10 @@ header .social .btn {
 }
 
 .date {
+  float: right;
+  padding-top: 15px;
   color: #909399;
+  clear: both;
 }
 
 @media screen and (max-width: 768px) {
