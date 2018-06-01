@@ -38,10 +38,8 @@
           </div>
           <div class="timeline-content" v-bind:class="[ (index+1)%2 === 0 ? 'right': '' ]">
             <h2>{{item.title}}</h2>
-            <p>
-              {{item.content}}
-            </p>
-            <!-- <a href="#" class="btn">More</a> -->
+            <p v-html="item.content"></p>
+            <a :href="item.link" class="btn">{{item.link_title}}</a>
             <i class="date">{{item.date}}</i>
           </div>
         </div>
@@ -56,15 +54,41 @@
     data: function () {
       return {
         data: [
-          {
-            title: 'deno issue 事件',
-              content: 'Node 作者ry开发了新项目 deno, 但一些中国开发者到此项目的issue下 留下无意义的 issue, 如: 请不要再更新了,老子学不动了; code six six; 随后ry 保护了此项目,禁止发言. 此后相关 issue 被删除, 参与者陆续被封号. 最后有一位开发者到issue 里用英文指责 ry 对 node 不负责任, 请求关闭项目.',
-            date: '2018-05-30'
-          }, {
-            title: '阮一峰大神文章',
-            content: '阮一峰大神文章被怼, 阮一峰大神文章被怼, 阮一峰大神文章被怼, 阮一峰大神文章被怼, 阮一峰大神文章被怼',
-            date: '2017-9-1'
-          }
+            {
+                title: 'deno issue 事件',
+                content: '<p>Node 作者 ry 开发了新项目 deno, 但一些中国开发者到此项目的issue下 留下无意义的 issue, 如: 请不要再更新了,老子学不动了; code six six; 随后ry 保护了此项目,禁止发言.<p> 此后相关 issue 被删除, 参与者陆续被封号. 最后有一位中国开发者到issue 里用英文指责 ry 对 node 不负责任, 请求关闭项目.<p/>',
+                date: '2018-05-30',
+                link_title: 'deno issue 事件中的那些作恶者们',
+                link: 'https://zhuanlan.zhihu.com/p/37550198',
+            },
+            {
+                title: '阮一峰版的博客被 ddos 下线',
+                content: '<p>继快排事件后, 阮一峰的博客被人ddos, 主机服务商关闭了他的账户.<p> 随后阮一峰发文, 确认此 ddos 是有组织的攻击, it 培训类网站如: w3cplus, 珠峰培训等几个也被 ddos. 几天后, 阮一峰博客恢复正常',
+                date: '2018-05-13',
+                link_title: '如何看待阮一峰的博客被人攻击？',
+                link: 'https://www.zhihu.com/question/277049486',
+            },
+            {
+                title: '有人发文指出: 阮一峰版的快速排序完全是错的',
+                content: '因为阮一峰博客的快排是非原地快排, 而面试者大多使用此版本的快排, 被作者批评. ',
+                date: '2018-05-13',
+                link_title: '面试官系列 (番外): 别再使用阮一峰版的快速排序了',
+                link: 'https://juejin.im/post/5af4902a6fb9a07abf728c40',
+            },
+            {
+                title: '我前端女神结婚了，现在很痛苦怎么办？',
+                content: '一位网友在知乎的提问: 他一直单恋前端女神, 甚至立志去了该女神所在的大公司,  还没有说上话, 就发现她准备结婚了, 很痛苦.',
+                date: '2018-03-29',
+                link_title: '来源:知乎',
+                link: 'https://www.zhihu.com/question/270341189',
+            },
+            {
+                title: 'Angular布道师, 大漠穷秋删除所有文字并离职',
+                content: '',
+                date: '2017-08-06',
+                link_title: '尤雨溪最后一次回应大漠穷秋',
+                link: 'https://zhuanlan.zhihu.com/p/28333484',
+            }
         ]
       }
     }
