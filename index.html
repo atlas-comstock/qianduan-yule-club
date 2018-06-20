@@ -39,7 +39,7 @@
           <div class="timeline-content" v-bind:class="[ (index+1)%2 === 0 ? 'right': '' ]">
             <h2>{{item.title}}</h2>
             <p v-html="item.content"></p>
-            <a :href="item.link" class="btn">{{item.link_title}}</a>
+            <a :href="item.link" class="btn" target="_blank" rel="noopener noreferrer">{{item.link_title}}</a>
             <i class="date">{{item.date}}</i>
           </div>
         </div>
@@ -55,6 +55,13 @@
       return {
         data: [
             {
+                title: 'Vue 的 star 数已经超过 React 啦',
+                content: 'Vue 每天仍然可以获得比 React 多几十个不等的 star, 按照现在的趋势 Vue 将会在 1-3 个月内超越 React 成为 Github 上被 star 最多的现代前端框架',
+                date: '2018-06-15',
+                link_title: '如何评价 Vue 在 Github 上的 star 数即将超越 React？',
+                link: 'https://www.v2ex.com/t/463284?p=2',
+            },
+						{
                 title: 'Office 365 正在用 JavaScript 重写',
                 content: '有媒体报道微软正在用 JS 重写 Office 365 等客户端软件',
                 date: '2018-06-13',
