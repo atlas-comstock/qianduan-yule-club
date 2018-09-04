@@ -175,6 +175,22 @@ header .social .btn {
   border-radius: 3px 3px 0 0;
 }
 
+#timeline .timeline-item .timeline-content details {
+  margin-bottom: 1em;
+}
+
+#timeline .timeline-item .timeline-content details ::-webkit-details-marker {
+  color: #ee4d4d;
+}
+
+#timeline .timeline-item .timeline-content details summary {
+  outline: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #timeline .timeline-item .timeline-content:before {
   content: '';
   position: absolute;

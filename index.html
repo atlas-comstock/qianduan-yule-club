@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>前端娱乐圈大事记</title>
-  <link rel="stylesheet" href="./fontend.css">
+  <link rel="stylesheet" href="./frontend.css">
 </head>
 
 <body>
@@ -39,6 +39,10 @@
           <div class="timeline-content" v-bind:class="[ (index+1)%2 === 0 ? 'right': '' ]">
             <h2>{{item.title}}</h2>
             <p v-html="item.content"></p>
+            <details v-if="item.more">
+              <summary>{{ item.moreTitle || '更多: ' }}</summary>
+              <p v-for="news of item.more">{{ news }}</p>
+            </details>
             <a :href="item.link" class="btn" target="_blank" rel="noopener noreferrer">{{item.link_title}}</a>
             <i class="date">{{item.date}}</i>
           </div>
@@ -55,11 +59,16 @@
         return {
           data: [
             {
-              title: '某前端框架买 star 登上 GitHub Trending',
+              title: '某前端框架盗号刷 star 登上 GitHub Trending',
               content: '今天上班，刷了一下 Github Trending，发现第一名是一个名叫 kui-vue，一天涨了一千多个 star 项目。',
               date: '2018-09-03',
               link_title: '石锤 github 买 star 行为',
               link: 'https://juejin.im/post/5b8c9310f265da4361530560',
+              more:[
+                'kui-vue 作者表示自己并不是买的 star, 而是通过盗号刷 star。',
+                '某个之前支持刷 star 者的账号表示"我是看到了未读提醒才点过来看的，前面的都非号主我本人回复。"',
+                '作者承认"是我盗的"'
+              ]
             },
             {
               title: '摩拜前端负责人性骚扰',
