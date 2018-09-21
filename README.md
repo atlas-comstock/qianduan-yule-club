@@ -1,6 +1,8 @@
 # qianduan-yule-club
 # 前端娱乐.俱乐部
 
+* 曾被硅星人微信公众号引用: https://mp.weixin.qq.com/s/-6miy7UyWGteS1C8IsB6RA
+
 欢迎提 PR，补充更多新闻
 直接在 index.html 里加上新闻就好，相信你能看懂。
 
