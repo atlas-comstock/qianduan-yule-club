@@ -233,6 +233,16 @@ header .social .btn {
   box-shadow: 2px 2px 0 transparent;
 }
 
+.btn:hover::before {
+  content: '\200c';
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  display: block;
+  width: calc(100% + 4px);
+  height: 2px;
+}
+
 .date {
   float: right;
   padding-top: 15px;
