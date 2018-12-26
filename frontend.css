@@ -165,6 +165,7 @@ header .social .btn {
 
 #timeline .timeline-item .timeline-content h2 {
   padding: 15px;
+  line-height: 1.5;
   background: #ee4d4d;
   color: #fff;
   margin: -20px -20px 0 -20px;
@@ -173,6 +174,10 @@ header .social .btn {
   -moz-border-radius: 3px 3px 0 0;
   -ms-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
+}
+
+#timeline .timeline-item .timeline-content .item-content {
+  line-height: 1.5;
 }
 
 #timeline .timeline-item .timeline-content:before {

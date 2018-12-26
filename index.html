@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>前端娱乐圈大事记</title>
-  <link rel="stylesheet" href="./fontend.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./frontend.css">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
           </div>
           <div class="timeline-content" v-bind:class="[ (index+1)%2 === 0 ? 'right': '' ]">
             <h2>{{item.title}}</h2>
-            <p v-html="item.content"></p>
+            <p class="item-content" v-html="item.content"></p>
             <a :href="item.link" class="btn" target="_blank" rel="noopener noreferrer">{{item.link_title}}</a>
             <i class="date">{{item.date}}</i>
           </div>
@@ -61,7 +62,7 @@
               link_title: 'Ant Design 圣诞地雷',
               link: 'https://www.v2ex.com/t/520690',
             },
-	    {
+            {
               title: '方应杭在掘金发表了一篇关于《停止学习框架》文章后引起多人反驳',
               content: '方应杭在发表了《停止学习框架》文章后，引发了多人反驳并发文回应，有 "驳《停止学习框架》","驳《驳 《停止学习框架》》","驳 《驳《驳《停止学习框架》》》","对于你们驳来驳去的《停止学习框架》，我有话说！"等文章相继发布，袁隆平看到了会有何感想？',
               date: '2018-12-20',
@@ -158,7 +159,7 @@
               date: '2015-12-18',
               link_title: '如何评价 minggeJS ？',
               link: 'https://www.zhihu.com/question/38537088',
-            },
+            }
           ]
         }
       }
